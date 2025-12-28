@@ -1,0 +1,152 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Arial,sans-serif;
+}
+
+body {
+    background: url("https://4kwallpapers.com/images/wallpapers/windows-10-dark-blue-5k-8k-3840x2160-733.jpg")
+    center / cover no-repeat;
+}
+.windows-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    padding: 0 10px;
+    color: white;
+    cursor: pointer;
+}
+.windows-logo{
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+}
+.windows-logo:hover{
+    content: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Windows_logo_-_2012_%28dark_blue%29.png");
+    opacity: 0.7;
+    background-color: rgba(255, 252, 252, 0.10);
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    background-color: white;
+    height: 45px;
+    cursor: text;
+}
+.search-bar:hover{
+    border-style: solid;
+    border-color: gray;
+}
+.search-bar:active{
+    border-style: solid;
+    border-color: royalblue;
+}
+
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-icon{
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    transform: scaleX(-1);
+}
+.task-view{
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+    filter: invert(1);
+}
+.task-view:hover{
+    content: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Windows_10_Task_View_Icon.png");
+    background-color: rgba(255, 252, 252, 0.60);
+}
+.search-text {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.76);
+    font-size: 18px;
+}
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.separator {
+    border-style: solid;
+    border-color: rgba(255, 252, 252, 0.62);
+    margin-right: -5px;
+    height: 45px;
+    width: 20px;
+    border-width: thin;
+}
+.separator:hover{
+    opacity: 0.5;
+}
+.notifications {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+}
+.notifications:hover{
+    background-color: rgba(255, 252, 252, 0.10);
+}
+.wifi-logo{
+    transform: scaleX(-1);
+    filter: invert(1);
+    height: 12px;
+    width: 12px;
+}
+.battery-logo, .sound-logo{
+    height: 18px;
+    width: 18px;
+    filter: invert(1);
+}
+.weather {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    padding: 10px;
+}
+.weather:hover{
+    background-color: rgba(255, 252, 252, 0.10);
+}
+.weather img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.weather p {
+    display: inline;
+    margin: 0;
+    font-size: 14px;
+}
+
+.desktop-icon{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+.time, .icon{
+    padding: 10px;
+}
+.time:hover, .icon:hover, .wifi-logo:hover, .battery-logo:hover, .sound-logo:hover {
+    background-color: rgba(255, 252, 252, 0.10);
+}
+.icon{
+    margin: -10px;
+}
