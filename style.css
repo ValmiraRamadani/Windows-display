@@ -1,9 +1,9 @@
 
 html, body {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     font-family: Arial,sans-serif;
+    overflow: hidden;
 }
 
 body {
@@ -22,12 +22,15 @@ body {
     height: 45px;
     padding: 0 10px;
     color: white;
+}
+.windows-footer > * {
     cursor: pointer;
 }
 .windows-logo{
-    height:20px;
     width: 20px;
+    aspect-ratio: 1 / 1;
     margin-left: 5px;
+    cursor: pointer;
 }
 .windows-logo:hover{
     content: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Windows_logo_-_2012_%28dark_blue%29.png");
@@ -39,8 +42,10 @@ body {
     align-items: center;
     width: 280px;
     background-color: white;
-    height: 45px;
+    height: 40px;
     cursor: text;
+    border-style: solid;
+    border-color: white;
 }
 .search-bar:hover{
     border-style: solid;
@@ -58,14 +63,14 @@ body {
 }
 
 .search-icon{
-    height: 20px;
     width: 20px;
+    aspect-ratio: 1 / 1;
     padding: 10px;
     transform: scaleX(-1);
 }
 .task-view{
-    height:20px;
     width: 20px;
+    aspect-ratio: 1 / 1;
     margin-left: 5px;
     filter: invert(1);
 }
@@ -95,58 +100,83 @@ body {
     opacity: 0.5;
 }
 .notifications {
-    height: 20px;
     width: 20px;
+    aspect-ratio: 1 / 1;
     padding: 10px;
-}
-.notifications:hover{
-    background-color: rgba(255, 252, 252, 0.10);
+    margin: 0;
 }
 .wifi-logo{
     transform: scaleX(-1);
     filter: invert(1);
     height: 12px;
-    width: 12px;
+    aspect-ratio: 1/1;
 }
 .battery-logo, .sound-logo{
-    height: 18px;
     width: 18px;
+    aspect-ratio: 1 / 1;
     filter: invert(1);
 }
 .weather {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
     vertical-align: middle;
-    margin-right: 10px;
-    padding: 10px;
+    height: 45px;
 }
-.weather:hover{
+.desktop-icon1:hover,.desktop-icon2:hover,.desktop-icon3:hover,div.icon:hover, div.time:hover, .weather:hover, .notifications:hover{
     background-color: rgba(255, 252, 252, 0.10);
-}
-.weather img {
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
-
-.weather p {
-    display: inline;
-    margin: 0;
-    font-size: 14px;
-}
-
-.desktop-icon{
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    cursor: pointer;
 }
 .time, .icon{
     padding: 10px;
 }
-.time:hover, .icon:hover, .wifi-logo:hover, .battery-logo:hover, .sound-logo:hover {
-    background-color: rgba(255, 252, 252, 0.10);
+.desktop-icon1,.desktop-icon2,.desktop-icon3{
+    height: 40px;
+    aspect-ratio: 1/1;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
-.icon{
-    margin: -10px;
+
+#recycle-toggle:checked ~ #recycle-open{
+    display: inline-block;
+    }
+
+#recycle-toggle:checked ~ footer .bar-icon{
+    display: inline-block;
+}
+
+
+#recycle-open {
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    margin-left: 300px;
+    display: none;
+}
+#recycle-open span, #recycle-open label {
+    color: white;
+    display: inline-block;
+    width: 16px;
+    aspect-ratio: 1/1;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-left: auto;
+    vertical-align: top;
+}
+
+.recycle-bin-small-icon{
+    height: 15px;
+    aspect-ratio: 1/1;
+    padding: 10px 0 5px 5px;
+}
+.bar-icon{
+    height: 30px;
+    aspect-ratio: 1/1;
+    display: none;
+}
+.path span {
+    color: black;
 }
