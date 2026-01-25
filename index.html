@@ -5,19 +5,30 @@
   <title>Windows Display</title>
   <link rel="icon" type="image/x-icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8355c42b-bec4-426e-a0fa-f39523ea6c02/da7v7y8-52d76d93-ab94-4015-903a-7b9be668b252.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi84MzU1YzQyYi1iZWM0LTQyNmUtYTBmYS1mMzk1MjNlYTZjMDIvZGE3djd5OC01MmQ3NmQ5My1hYjk0LTQwMTUtOTAzYS03YjliZTY2OGIyNTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.j5Z8eRxUX79o0NB7aJDiyNcHl2HB0QtsABu4jJbyYDo">
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
-<body>
-    <input type="checkbox" id="recycle-toggle" style="display:none;">
-    <label for="recycle-toggle"><img src="https://wp-cdn.pugetsystems.com/2023/12/recycle2.png" alt="recycle bin" class="desktop-icon1"></label>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/WebStorm_Icon.svg/250px-WebStorm_Icon.svg.png" alt="recycle bin" class="desktop-icon2">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Windows_Explorer.svg/1024px-Windows_Explorer.svg.png" alt="recycle bin" class="desktop-icon3">
-<footer class="windows-footer">
+<body id="Page-1">
+    <img src="https://wp-cdn.pugetsystems.com/2023/12/recycle2.png" alt="recycle bin" class="desktop-icon1" onclick="RecycleBin()">
+    <div id="icons">
+     </div>
+    <div id="customMenu">
+        <ul>
+          <li id="deleteOption">Delete</li>
+          <li>Refresh</li>
+        </ul>
+    </div>
+
+    <footer class="windows-footer">
   <div class="left-group">
     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8355c42b-bec4-426e-a0fa-f39523ea6c02/da7v7y8-52d76d93-ab94-4015-903a-7b9be668b252.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi84MzU1YzQyYi1iZWM0LTQyNmUtYTBmYS1mMzk1MjNlYTZjMDIvZGE3djd5OC01MmQ3NmQ5My1hYjk0LTQwMTUtOTAzYS03YjliZTY2OGIyNTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.j5Z8eRxUX79o0NB7aJDiyNcHl2HB0QtsABu4jJbyYDo" alt="Windows Logo" class="windows-logo">
 
     <div class="search-bar">
       <img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-9.png" alt="Search icon" class="search-icon">
-      <div class="search-text">Type here to search</div>
+      <input type="text" placeholder="Type here to search" class="search-text">
     </div>
 
     <img src="https://cdn.iconscout.com/icon/free/png-256/free-task-view-icon-svg-download-png-1174826.png" alt="Task view" class="task-view">
@@ -44,29 +55,5 @@
     <div class="separator"></div>
   </div>
 </footer>
-    <div id="recycle-open">
-      <div class="window-header" style="height: 60px; background-color: cadetblue; display: block">
-        <img src="https://wp-cdn.pugetsystems.com/2023/12/recycle2.png" alt="recycle bin" class="recycle-bin-small-icon">
-        <img src="https://icons.veryicon.com/png/o/system/dan_system/file-60.png" alt="recycle bin" class="recycle-bin-small-icon">
-        <div style="display: inline-block; vertical-align: top; padding-top:10px; margin-right: 320px">Recycle bin </div>
-        <span style="background-color: lightgreen">_</span>
-        <label style="background-color: red" for="recycle-toggle">x</label>
-        ← → ↑
-        <input placeholder="Desktop/Recycle bin/" type="text" name="Type here to search" style="width: 60%">
-        <input placeholder="Search here.." type="text" name="Type here to search" style="width: 25%">
-      </div>
-      <div class="path" style="display: inline-block;">
-        <p>Quick Access</p>
-        <p>One drive</p>
-        <p>This PC</p>
-        <p>Desktop</p>
-        <p>Network</p>
-
-      </div>
-      <div class="icons" style="display: inline-block">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/WebStorm_Icon.svg/250px-WebStorm_Icon.svg.png" alt="recycle bin" class="desktop-icon2">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Windows_Explorer.svg/1024px-Windows_Explorer.svg.png" alt="recycle bin" class="desktop-icon3">
-      </div>
-    </div>
 </body>
 </html>
