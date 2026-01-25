@@ -2,11 +2,11 @@
 html, body {
     height: 100vh;
     margin: 0;
-    font-family: Arial,sans-serif;
+    font-family: Roboto, sans-serif;
     overflow: hidden;
 }
 
-body {
+#Page-1{
     background: url("https://4kwallpapers.com/images/wallpapers/windows-10-dark-blue-5k-8k-3840x2160-733.jpg")
     center / cover no-repeat;
 }
@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgb(23, 35, 43);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -29,8 +29,10 @@ body {
 .windows-logo{
     width: 20px;
     aspect-ratio: 1 / 1;
-    margin-left: 5px;
     cursor: pointer;
+    padding: 13px;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 .windows-logo:hover{
     content: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Windows_logo_-_2012_%28dark_blue%29.png");
@@ -82,6 +84,11 @@ body {
     margin: 0;
     color: rgba(0, 0, 0, 0.76);
     font-size: 18px;
+    border: 0;
+    outline:0;
+}
+.search-text:focus {
+    outline:none!important;
 }
 .right-group {
     display: flex;
@@ -124,53 +131,19 @@ body {
     vertical-align: middle;
     height: 45px;
 }
-.desktop-icon1:hover,.desktop-icon2:hover,.desktop-icon3:hover,div.icon:hover, div.time:hover, .weather:hover, .notifications:hover{
+.desktop-icon1:hover,.desktop-icon:hover,div.icon:hover, div.time:hover, .weather:hover, .notifications:hover{
     background-color: rgba(255, 252, 252, 0.10);
 }
 .time, .icon{
     padding: 10px;
 }
-.desktop-icon1,.desktop-icon2,.desktop-icon3{
+.desktop-icon1,.desktop-icon{
     height: 40px;
     aspect-ratio: 1/1;
     display: block;
     margin: 10px;
     padding: 10px;
     cursor: pointer;
-}
-
-#recycle-toggle:checked ~ #recycle-open{
-    display: inline-block;
-    }
-
-#recycle-toggle:checked ~ footer .bar-icon{
-    display: inline-block;
-}
-
-
-#recycle-open {
-    width: 500px;
-    height: 400px;
-    background-color: white;
-    margin-left: 300px;
-    display: none;
-}
-#recycle-open span, #recycle-open label {
-    color: white;
-    display: inline-block;
-    width: 16px;
-    aspect-ratio: 1/1;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 2px;
-    margin-left: auto;
-    vertical-align: top;
-}
-
-.recycle-bin-small-icon{
-    height: 15px;
-    aspect-ratio: 1/1;
-    padding: 10px 0 5px 5px;
 }
 .bar-icon{
     height: 30px;
@@ -179,4 +152,41 @@ body {
 }
 .path span {
     color: black;
+}
+
+#customMenu{
+    display: none;
+    background-color: #cccccc;
+    position: absolute;
+    font-size: 15px;
+    box-shadow: 0 0 30px #4b4848;
+    z-index: 2000;
+    overflow: hidden;
+}
+#customMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#customMenu ul li{
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#customMenu ul li:hover{
+    background-color: #7c7979;
+}
+
+
+
+#recycleBin {
+    min-height: 200px;
+    width: 1000px;
+    display: inline-block;
+}
+
+#recycleBin img {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
 }
